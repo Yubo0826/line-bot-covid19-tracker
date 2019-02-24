@@ -34,7 +34,7 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     message = ImagemapSendMessage(
-        base_url = "https://img.shop.com/Image/260000/263400/263424/products/1477123666__500x500__.jpg",
+        base_url = "https://img.shop.com/Image/260000/263400/263424/products/1477123666__175x175__.jpg",
         alt_text = "這是組圖訊息",
         base_size = BaseSize(height=1040,width=1040),
         action=[
