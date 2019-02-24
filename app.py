@@ -34,8 +34,8 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     message = VideoSendMessage(
-        original_content_url = "https://imgur.com/a/GkVDV02",
-        preview_image_url = "https://i.ytimg.com/vi/ArSIvo4VeUE/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLBpFhniA385Dc4RZrjHSs8kHmxafQ"
+        original_content_url = "https://i.imgur.com/8j32EDa.mp4",
+        preview_image_url = "https://imgur.com/8j32EDa"
     )
     #event.message.text就是用戶傳來的文字訊息
     line_bot_api.reply_message(event.reply_token, message)
