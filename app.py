@@ -34,7 +34,7 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     message = AudioSendMessage(
-        original_content_url = "https://picosong.com/wSgna",
+        original_content_url = "https://mu6.me/160987",
         duration = 3330000
     )
     #event.message.text就是用戶傳來的文字訊息
