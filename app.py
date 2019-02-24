@@ -33,36 +33,30 @@ def callback():
 # 處理訊息
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    message = ImagemapSendMessage(
-        base_url='https://i.imgur.com/Ghw1W1E.png',
-        alt_text='這是組圖訊息',
-        base_size=BaseSize(height=2000, width=2000),
-        actions=[
-            URIImagemapAction(
-                link_uri='https://www.csleep.com.tw/ecommerce/bambooduvet-6x7.html',
-                area=ImagemapArea(
-                    x=0, y=0, width=1000, height=1000
+    message = TemplateSendMessage(
+        alt_text='這是按鈕訊息板塊',
+        template=ButtonsTemplate(
+            thumbnail_image_url='https://i.imgur.com/XEXfWvJ.jpg',
+            title='購物選單',
+            text="這是用來展示的板塊",
+            actions=[
+                DatetimePickerTemplateAction(
+                    label="選擇時間",
+                    mode='date',
+                    initial='2019-02-24',
+                    max='2019-12-31',
+                    min='2019-01-01'
+                ),
+                MessageTemplateAction(
+                    label="清空購物車",
+                    text="GOGOGO"
+                ),
+                URITemplateAction(
+                    label="馬上來逛逛",
+                    uri="https://tw.shop.com/maso0310"
                 )
-            ),
-            URIImagemapAction(
-                link_uri='https://www.csleep.com.tw/ecommerce/topheatwoolduvet5.html',
-                area=ImagemapArea(
-                    x=1000, y=0, width=1000, height=1000
-                )
-            ),
-            URIImagemapAction(
-                link_uri='https://www.csleep.com.tw/ecommerce/thailatex.html',
-                area=ImagemapArea(
-                    x=0, y=1000, width=1000, height=1000
-                )
-            ),
-            URIImagemapAction(
-                link_uri='https://www.csleep.com.tw/ecommerce/velvetpillow201711.html',
-                area=ImagemapArea(
-                    x=1000, y=1000, width=1000, height=1000
-                )
-            )
-        ]
+            ]
+        )
     )
     #event.message.text就是用戶傳來的文字訊息
     line_bot_api.reply_message(event.reply_token, message)
