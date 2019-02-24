@@ -38,6 +38,7 @@ def handle_message(event):
         address="台北車站",
         latitude="25.0477505",
         longitude="121.5170599"
+        
     )
     #event.message.text就是用戶傳來的文字訊息
     line_bot_api.reply_message(event.reply_token, message)
