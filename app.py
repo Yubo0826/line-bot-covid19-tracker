@@ -34,8 +34,8 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     message = StickerSendMessage(
-        package_id="2",
-        sticker_id="3"
+        package_id="1",
+        sticker_id="5"
     )
     #event.message.text就是用戶傳來的文字訊息
     line_bot_api.reply_message(event.reply_token, message)
