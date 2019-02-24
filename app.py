@@ -39,19 +39,19 @@ def handle_message(event):
         base_size=BaseSize(height=2000, width=2000),
         actions=[
             URIImagemapAction(
-                link_uri='https://www.csleep.com.tw/ecommerce/thailatex.html',
+                link_uri='https://www.csleep.com.tw/ecommerce/bambooduvet-6x7.html',
                 area=ImagemapArea(
                     x=0, y=0, width=1000, height=1000
                 )
             ),
             URIImagemapAction(
-                link_uri='https://www.csleep.com.tw/ecommerce/bambooduvet-6x7.html',
+                link_uri='https://www.csleep.com.tw/ecommerce/topheatwoolduvet5.html',
                 area=ImagemapArea(
                     x=1000, y=0, width=1000, height=1000
                 )
             ),
             URIImagemapAction(
-                link_uri='https://www.csleep.com.tw/ecommerce/topheatwoolduvet5.html',
+                link_uri='https://www.csleep.com.tw/ecommerce/thailatex.html',
                 area=ImagemapArea(
                     x=0, y=1000, width=1000, height=1000
                 )
