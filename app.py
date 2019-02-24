@@ -34,8 +34,8 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     message = AudioSendMessage(
-        original_content_url = "https://mu6.me/160987",
-        duration = 3330000
+        original_content_url = "https://youtu.be/qMsIcUttN_8",
+        duration = 29000
     )
     #event.message.text就是用戶傳來的文字訊息
     line_bot_api.reply_message(event.reply_token, message)
