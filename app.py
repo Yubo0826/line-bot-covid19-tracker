@@ -38,14 +38,14 @@ def handle_message(event):
         alt_text = "這是組圖訊息",
         base_size = BaseSize(height=1024,width=1024),
         action=[
-            URIAction(
-                link_uri='https://www.csleep.com.tw/index.html',
+            URIImagemapAction(
+                link_url='https://www.csleep.com.tw/ecommerce/quilt/flannelduvet11.html',
                 area=ImagemapArea(
                     x=0,y=0,width=512,height=1024
                 )
             ),
-            URIAction(
-                link_uri='https://www.csleep.com.tw/index.html',
+            URIImagemapAction(
+                link_url='https://www.csleep.com.tw/ecommerce/bedcover-1089/flannel-bedsheetb.html',
                 area=ImagemapArea(
                     x=520,y=0,width=512,height=1024
                 )
