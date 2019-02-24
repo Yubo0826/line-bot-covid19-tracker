@@ -40,14 +40,14 @@ def handle_message(event):
         action=[
             URIImagemapAction(
                 link_uri='https://www.csleep.com.tw/index.html',
-                text = '法蘭絨'
+                text = '法蘭絨',
                 area=ImagemapArea(
                     x=0,y=0,width=520,height=1040
                 )
             ),
             URIImagemapAction(
                 link_uri='https://www.csleep.com.tw/index.html',
-                text = '羊毛被'
+                text = '羊毛被',
                 area=ImagemapArea(
                     x=520,y=0,width=520,height=1040
                 )
