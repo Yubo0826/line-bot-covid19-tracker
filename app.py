@@ -33,7 +33,10 @@ def callback():
 # 處理訊息
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    message = TextSendMessage(text="https://tw.shop.com/maso0310/search/" + event.message.text)
+    message = ImageSendMessage(
+        original_content_url = "https://img.shop.com/Image/260000/263400/263424/products/1477123666__175x175__.jpg",
+        preview_image_url = "https://img.shop.com/Image/260000/263400/263424/products/1477123666__175x175__.jpg"
+    )
     #event.message.text就是用戶傳來的文字訊息
     line_bot_api.reply_message(event.reply_token, message)
 
