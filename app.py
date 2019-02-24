@@ -39,15 +39,9 @@ def handle_message(event):
         base_size = BaseSize(height=1024,width=1024),
         action=[
             URIImagemapAction(
-                link_url='https://www.csleep.com.tw/ecommerce/quilt/flannelduvet11.html',
-                area=ImagemapArea(
-                    x=0,y=0,width=512,height=1024
-                )
-            ),
-            URIImagemapAction(
                 link_url='https://www.csleep.com.tw/ecommerce/bedcover-1089/flannel-bedsheetb.html',
                 area=ImagemapArea(
-                    x=520,y=0,width=512,height=1024
+                    x=0,y=0,width=1024,height=1024
                 )
             )
         ]
