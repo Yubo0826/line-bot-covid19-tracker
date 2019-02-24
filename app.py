@@ -38,13 +38,13 @@ def handle_message(event):
         alt_text = "這是組圖訊息",
         base_size = BaseSize(height=1024,width=1024),
         action=[
-            URIImagemapAction(
+            URIAction(
                 link_uri='https://www.csleep.com.tw/index.html',
                 area=ImagemapArea(
                     x=0,y=0,width=512,height=1024
                 )
             ),
-            URIImagemapAction(
+            URIAction(
                 link_uri='https://www.csleep.com.tw/index.html',
                 area=ImagemapArea(
                     x=520,y=0,width=512,height=1024
