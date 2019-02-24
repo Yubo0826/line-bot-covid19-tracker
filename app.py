@@ -34,22 +34,22 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     message = ImagemapSendMessage(
-        base_url = "https://i.imgur.com/Ghw1W1E.png",
+        base_url = "https://i.imgur.com/Ghw1W1Eh.png",
         alt_text = "這是組圖訊息",
-        base_size = BaseSize(height=1040,width=1040),
+        base_size = BaseSize(height=1024,width=1024),
         action=[
             URIImagemapAction(
                 link_uri='https://www.csleep.com.tw/index.html',
                 text = '法蘭絨',
                 area=ImagemapArea(
-                    x=0,y=0,width=520,height=1040
+                    x=0,y=0,width=512,height=1024
                 )
             ),
             URIImagemapAction(
                 link_uri='https://www.csleep.com.tw/index.html',
                 text = '羊毛被',
                 area=ImagemapArea(
-                    x=520,y=0,width=520,height=1040
+                    x=520,y=0,width=512,height=1024
                 )
             )
         ]
