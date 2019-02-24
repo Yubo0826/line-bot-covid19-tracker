@@ -33,12 +33,9 @@ def callback():
 # 處理訊息
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    message = LocationSendMessage(
-        title="台北車站",
-        address="台北車站",
-        latitude="25.0477505",
-        longitude="121.5170599"
-        
+    message = StickerSendMessage(
+        package_id="1",
+        sticker_id="2"
     )
     #event.message.text就是用戶傳來的文字訊息
     line_bot_api.reply_message(event.reply_token, message)
