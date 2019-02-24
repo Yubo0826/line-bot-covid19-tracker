@@ -36,18 +36,18 @@ def handle_message(event):
     message = ImagemapSendMessage(
         base_url = "https://i.imgur.com/QFPjwp9.jpg",
         alt_text = "這是組圖訊息",
-        base_size = BaseSize(height=641,width=508),
+        base_size = BaseSize(height=1040,width=1040),
         action=[
             URIImagemapAction(
                 link_uri='https://tw.shop.com/%E4%BA%94%E6%9C%88%E8%8A%B1%E6%8A%BD%E5%8F%96%E8%A1%9B%E7%94%9F%E7%B4%99-1477123666-p+.xhtml',
                 area=ImagemapArea(
-                    x=0,y=0,width=254,height=641
+                    x=0,y=0,width=520,height=1040
                 )
             ),
             MessageImagemapAction(
                 text='五月花衛生紙',
                 area=ImagemapArea(
-                    x=254,y=0,width=254,height=641
+                    x=520,y=0,width=520,height=1040
                 )
             )
         ]
