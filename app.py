@@ -35,7 +35,7 @@ def callback():
 def handle_message(event):
     message = AudioSendMessage(
         original_content_url = "https://picosong.com/wSgna",
-        duration = 333
+        duration = 3330000
     )
     #event.message.text就是用戶傳來的文字訊息
     line_bot_api.reply_message(event.reply_token, message)
