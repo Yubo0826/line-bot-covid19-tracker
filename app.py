@@ -34,8 +34,8 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     message = VideoSendMessage(
-        original_content_url = "https://drive.google.com/open?id=1_K6Tcwu8k_9d6kCS_YhOCVPYVNTTFLwl",
-        preview_image_url = "https://drive.google.com/open?id=1InJHmyGrVyPGN5Wb-g7SJ8zRsZQZzoIX"
+        original_content_url = "https://youtu.be/ZiUowakMS_8",
+        preview_image_url = "https://i.ytimg.com/an_webp/ZiUowakMS_8/mqdefault_6s.webp?du=3000&sqp=CP_6x-MF&rs=AOn4CLAh72lAYzSZk73Noa2XTFCEwnZhGA"
     )
     #event.message.text就是用戶傳來的文字訊息
     line_bot_api.reply_message(event.reply_token, message)
