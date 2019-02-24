@@ -34,7 +34,7 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     message = VideoSendMessage(
-        original_content_url = "https://www.youtube.com/028b899f-18fa-46d6-b3de-781ee44884b1",
+        original_content_url = "https://youtu.be/9G-c-8D-9vE",
         preview_image_url = "https://i.ytimg.com/an_webp/9G-c-8D-9vE/mqdefault_6s.webp?du=3000&sqp=CJnox-MF&rs=AOn4CLAAswCukrdu8bDNdXI5hEGtGj6MXA"
     )
     #event.message.text就是用戶傳來的文字訊息
