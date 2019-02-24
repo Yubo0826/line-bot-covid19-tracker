@@ -33,7 +33,7 @@ def callback():
 # 處理訊息
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    message = TextSendMessage(text="https://www.google.com/search?q="+event.message.text)
+    message = TextSendMessage(text= event.message.text)
     line_bot_api.reply_message(event.reply_token, message)
 
 import os
