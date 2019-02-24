@@ -33,9 +33,9 @@ def callback():
 # 處理訊息
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    message = ImageSendMessage(
-        original_content_url = "https://img.shop.com/Image/260000/263400/263424/products/1477123666__175x175__.jpg",
-        preview_image_url = "https://img.shop.com/Image/260000/263400/263424/products/1477123666__175x175__.jpg"
+    message = VideoSendMessage(
+        original_content_url = "https://www.youtube.com/watch?v=i8ncIcJs-LA&t=36s",
+        preview_image_url = "https://i.ytimg.com/vi/i8ncIcJs-LA/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLAUrKQjcvz9TSAMfsMbyV-kcOetWQ"
     )
     #event.message.text就是用戶傳來的文字訊息
     line_bot_api.reply_message(event.reply_token, message)
