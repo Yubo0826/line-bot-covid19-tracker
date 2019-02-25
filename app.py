@@ -42,7 +42,7 @@ def handle_message(event):
             actions=[
                 DatetimePickerTemplateAction(
                     label="選擇時間",
-                    data=data1,
+                    data='data1',
                     mode='date',
                     initial='2019-02-24',
                     max='2019-12-31',
