@@ -42,9 +42,11 @@ def handle_message(event):
     if '我想瞭解怎麼報名招商說明會' or '我想瞭解目前最新優惠' in msg:
         message = TextSendMessage(text='請輸入您的email帳號')
         line_bot_api.reply_message(event.reply_token, message)        
-    else:
+    elif '功能列表' in msg:
         message = function_list()
         line_bot_api.reply_message(event.reply_token, message)
+    else:
+        pass
 
 
 import os
