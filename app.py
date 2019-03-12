@@ -8,6 +8,11 @@ from linebot.exceptions import (
 )
 from linebot.models import *
 
+
+#======這裡是呼叫的檔案內容=====
+from Function import *
+#======這裡是呼叫的檔案內容=====
+
 app = Flask(__name__)
 
 # Channel Access Token
@@ -33,33 +38,7 @@ def callback():
 # 處理訊息
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    message = TemplateSendMessage(
-        alt_text='這是按鈕訊息板塊',
-        template=ButtonsTemplate(
-            thumbnail_image_url='https://i.imgur.com/XEXfWvJ.jpg',
-            title='購物選單',
-            text="這是用來展示的板塊",
-            actions=[
-                DatetimePickerTemplateAction(
-                    label="選擇時間",
-                    data='data1',
-                    mode='date',
-                    initial='2019-02-24',
-                    max='2019-12-31',
-                    min='2019-01-01'
-                ),
-                MessageTemplateAction(
-                    label="清空購物車",
-                    text="GOGOGO"
-                ),
-                URITemplateAction(
-                    label="馬上來逛逛",
-                    uri="https://tw.shop.com/maso0310"
-                )
-            ]
-        )
-    )
-    #event.message.text就是用戶傳來的文字訊息
+    message = function_list()
     line_bot_api.reply_message(event.reply_token, message)
 
 import os
