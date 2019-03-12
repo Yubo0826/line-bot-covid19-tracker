@@ -18,7 +18,7 @@ def function_list():
             columns=[
                 CarouselColumn(
                     #模塊1上面的圖片要用哪一張，透過連結(URL)的方式給機器人
-                    thumbnail_image_url='https://example.com/item1.jpg',
+                    thumbnail_image_url='https://img.shop.com/Image/homepage/TW-KE-Shop-March-2019-hp-media1551283640376.jpg',
                     #模塊1的標題名稱
                     title='舉例最新優惠',
                     #模塊1的副標題或標題下的文字內容
@@ -39,22 +39,24 @@ def function_list():
                     ]
                 ),
                 CarouselColumn(
-                    thumbnail_image_url='https://example.com/item2.jpg',
-                    title='this is menu2',
-                    text='description2',
+                    #模塊1上面的圖片要用哪一張，透過連結(URL)的方式給機器人
+                    thumbnail_image_url='https://img.shop.com/Image/homepage/ps-twn-69586-recruit-program-banners-hp-media1550714025911.jpg',
+                    #模塊1的標題名稱
+                    title='報名招商說明會',
+                    #模塊1的副標題或標題下的文字內容
+                    text='馬上獲得最新招商資訊',
                     actions=[
-                        PostbackTemplateAction(
-                            label='postback2',
-                            text='postback text2',
-                            data='action=buy&itemid=2'
-                        ),
                         MessageTemplateAction(
-                            label='message2',
-                            text='message text2'
+                            #讓用戶丟出指定訊息的按鈕名稱
+                            label='點我點我',
+                            #按下去之後用戶會丟出什麼東西
+                            text='我想瞭解怎麼報名招商說明會'
                         ),
                         URITemplateAction(
-                            label='uri2',
-                            uri='http://example.com/2'
+                            #讓用戶進入指定連結的按鈕名稱
+                            label='進入看更多',
+                            #讓用戶進入什麼連結或更多指令
+                            uri='https://tw.shop.com/'
                         )
                     ]
                 )
