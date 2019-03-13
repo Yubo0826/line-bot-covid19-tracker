@@ -11,6 +11,7 @@ from linebot.models import *
 
 #======這裡是呼叫的檔案內容=====
 from message import *
+from new import *
 #======這裡是呼叫的檔案內容=====
 
 app = Flask(__name__)
@@ -52,10 +53,7 @@ def handle_message(event):
         message = Carousel_Template()
         line_bot_api.reply_message(event.reply_token, message)
     elif '圖片畫廊' in msg:
-        message = image_carousel_message1()
-        line_bot_api.reply_message(event.reply_token, message)
-    elif '將這個訊息偷偷回傳給機器人' in msg:
-        message = TextSendMessage(text='機器人已經收到訊息了')
+        message = test()
         line_bot_api.reply_message(event.reply_token, message)
     else:
         pass
