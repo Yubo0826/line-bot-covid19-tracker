@@ -55,6 +55,9 @@ def handle_message(event):
     elif '圖片畫廊' in msg:
         message = test()
         line_bot_api.reply_message(event.reply_token, message)
+    elif '功能列表' in msg:
+        message = function_list()
+        line_bot_api.reply_message(event.reply_token, message)
     else:
         pass
 
