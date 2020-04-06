@@ -10,6 +10,7 @@ from linebot.exceptions import (
 from linebot.models import (
     MessageEvent, TextMessage, TextSendMessage, LocationSendMessage
 )
+from myFunc import covid
 
 import os, sys, logging
 app = Flask(__name__)
@@ -39,13 +40,11 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     # text_message = TextSendMessage(text=event.message.text)
-    location_message = LocationSendMessage(
-    title='my location',
-    address='Tokyo',
-    latitude=35.65910807942215,
-    longitude=139.70372892916203
-)
-    line_bot_api.reply_message(event.reply_token, location_message)
+    line_bot_api.reply_message(event.reply_token, "！！！COVID-19！！！(武漢肺炎、新型冠狀病毒)全球肆虐\n請輸入國家已了解該國家疫情!!!")
+    try:
+        line_bot_api.reply_message(event.reply_token, covid(event.message.text))
+    except:
+        line_bot_api.reply_message(event.reply_token, "你輸入的國家不存在喔！請重新確認！")
 
 
 import os
