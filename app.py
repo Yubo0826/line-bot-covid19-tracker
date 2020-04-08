@@ -13,7 +13,8 @@ from linebot.models import (
 from myFunc import covid
 
 import urllib.request as req
-import os, sys, logging,bs4
+import bs4
+import os, sys, logging
 app = Flask(__name__)
 log = create_logger(app)
 
@@ -49,7 +50,6 @@ def handle_message(event):
     #     line_bot_api.reply_message(event.reply_token, covid_message)
     # except:
     #     line_bot_api.reply_message(event.reply_token, "你輸入的國家不存在喔！請重新確認！")
-
 
 import os
 if __name__ == "__main__":
