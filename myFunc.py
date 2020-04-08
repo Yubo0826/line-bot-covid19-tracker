@@ -10,14 +10,14 @@ def covid(country):
 
     countries=root.find_all("div",class_='country-name svelte-1quy94t')
     confirmed_number=root.find_all("div",class_='confirmed number svelte-1quy94t')
-    death=root.find_all("div",class_='death number svelte-1quy94t')
-    recovered=root.find_all("div",class_='recovered number svelte-1quy94t')
+    death_number=root.find_all("div",class_='death number svelte-1quy94t')
+    recovered_number=root.find_all("div",class_='recovered number svelte-1quy94t')
 
     total=len(countries)
-    count_dic={}
+    a={}
     for n in range(total):
-        count_dic[countries[n].text]=confirmed_number[n].text + death[n].text + recovered[n].text
-
-    return count_dic[country]
+        a[countries[n].text.strip()] = [confirmed_number[n].text.strip(), death_number[n].text.strip(), recovered_number[n].text.strip()]
+            
+    return a[country]
         
 

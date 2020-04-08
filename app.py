@@ -12,7 +12,8 @@ from linebot.models import (
 )
 from myFunc import covid
 
-import os, sys, logging
+import urllib.request as req
+import os, sys, logging,bs4
 app = Flask(__name__)
 log = create_logger(app)
 
@@ -42,6 +43,7 @@ def handle_message(event):
     #"！！！COVID-19！！！(武漢肺炎、新型冠狀病毒)全球肆虐\n請輸入國家已了解該國家疫情!!!"
     text_message = TextSendMessage(text=event.message.text)
     line_bot_api.reply_message(event.reply_token,text_message)
+    
     covid_message=TextSendMessage(text=covid(event.message.text))
     try:
         line_bot_api.reply_message(event.reply_token, covid_message)
