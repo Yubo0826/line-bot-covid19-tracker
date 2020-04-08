@@ -43,12 +43,12 @@ def handle_message(event):
     #"！！！COVID-19！！！(武漢肺炎、新型冠狀病毒)全球肆虐\n請輸入國家已了解該國家疫情!!!"
     text_message = TextSendMessage(text=event.message.text)
     line_bot_api.reply_message(event.reply_token,text_message)
-    
-    covid_message=TextSendMessage(text=covid(event.message.text))
-    try:
-        line_bot_api.reply_message(event.reply_token, covid_message)
-    except:
-        line_bot_api.reply_message(event.reply_token, "你輸入的國家不存在喔！請重新確認！")
+
+    # covid_message=TextSendMessage(text=covid(event.message.text))
+    # try:
+    #     line_bot_api.reply_message(event.reply_token, covid_message)
+    # except:
+    #     line_bot_api.reply_message(event.reply_token, "你輸入的國家不存在喔！請重新確認！")
 
 
 import os
