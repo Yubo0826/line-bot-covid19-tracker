@@ -45,6 +45,7 @@ def handle_message(event):
     # text_message = TextSendMessage(text=event.message.text)
     # line_bot_api.reply_message(event.reply_token,text_message)
     covid_message=TextSendMessage(text=covid(event.message.text))
+    print(covid_message)
     try:
         line_bot_api.reply_message(event.reply_token, covid_message)
     except:
