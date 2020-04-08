@@ -46,10 +46,9 @@ def handle_message(event):
     # line_bot_api.reply_message(event.reply_token,text_message)
     covid_message=TextSendMessage(text=covid(event.message.text))
     print(covid_message)
-    try:
-        line_bot_api.reply_message(event.reply_token, covid_message)
-    except:
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text="你輸入的國家不存在喔！請重新確認！"))
+    line_bot_api.reply_message(event.reply_token, covid_message)
+    # except:
+    #     line_bot_api.reply_message(event.reply_token, TextSendMessage(text="你輸入的國家不存在喔！請重新確認！"))
 
 import os
 if __name__ == "__main__":
