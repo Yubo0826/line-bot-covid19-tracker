@@ -18,6 +18,6 @@ def covid(country):
     for n in range(total):
         a[countries[n].text.strip()] = [confirmed_number[n].text.strip(), death_number[n].text.strip(), recovered_number[n].text.strip()]
 
-    return a[country].text
+    return a[country].text()
         
 
