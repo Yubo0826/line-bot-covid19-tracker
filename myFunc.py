@@ -21,5 +21,4 @@ def covid(country):
     str_country="在 "+country+"\n確診人數為: "+a[country][0]+"\n死亡人數為: "+a[country][1]+"\n康復人數為: "+a[country][2]
     return str_country
 
-country=input()
-print(covid(country))
+
