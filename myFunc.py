@@ -18,6 +18,8 @@ def covid(country):
     for n in range(total):
         a[countries[n].text.strip()] = [confirmed_number[n].text.strip(), death_number[n].text.strip(), recovered_number[n].text.strip()]
 
-    return a[country].text()
-        
+    str_country="在 "+country+"\n確診人數為: "+a[country][0]+"\n死亡人數為: "+a[country][1]+"\n康復人數為: "+a[country][2]
+    return str_country
 
+country=input()
+print(covid(country))
