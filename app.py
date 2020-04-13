@@ -10,11 +10,12 @@ from linebot.exceptions import (
 from linebot.models import (
     MessageEvent, TextMessage, TextSendMessage, LocationSendMessage
 )
-from myFunc import covid
+from myFunc import fetch,update
 
 import urllib.request as req
 import bs4
 import os, sys, logging
+
 app = Flask(__name__)
 log = create_logger(app)
 
@@ -41,15 +42,14 @@ def callback():
 # 處理訊息
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    #"！！！COVID-19！！！(武漢肺炎、新型冠狀病毒)全球肆虐\n請輸入國家已了解該國家疫情!!!"
-    # text_message = TextSendMessage(text=event.message.text)
-    # line_bot_api.reply_message(event.reply_token,text_message)
-    covid_text=covid(event.message.text)
-    covid_message=TextSendMessage(text=covid_text)
-    print(covid_message)
-    line_bot_api.reply_message(event.reply_token, covid_message)
-    # except:
-    #     line_bot_api.reply_message(event.reply_token, TextSendMessage(text="你輸入的國家不存在喔！請重新確認！"))
+    if 'update' in event.message.text:
+        update()
+        line_bot_api.reply_message(event.reply_token,TextSendMessage(text="資料更新完成!"))
+    else:
+        covid_text=fetch(event.message.text)
+        covid_message=TextSendMessage(text=covid_text)
+        line_bot_api.reply_message(event.reply_token, covid_message)
+
 
 import os
 if __name__ == "__main__":
