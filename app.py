@@ -43,8 +43,9 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     if 'update' in event.message.text:
-        update()
-        line_bot_api.reply_message(event.reply_token,TextSendMessage(text="資料更新完成!"))
+        notice=update()
+        notice_text=TextSendMessage(text=notice)
+        line_bot_api.reply_message(event.reply_token,notice_text)
     else:
         covid_text=fetch(event.message.text)
         covid_message=TextSendMessage(text=covid_text)

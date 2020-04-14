@@ -4,15 +4,16 @@ import json
 
 def fetch(country):
     with open("covid_country_condition.txt","r",encoding="utf-8") as file:
-        a=json.loads(file,ensure_ascii=False)
+        a=json.load(file)
     key_country=a.keys()
     for item in key_country:
-        if item in country:
+        if country in item:
             str_country="在 "+country+"\n確診人數為: "+a[country][0]+"\n死亡人數為: "+a[country][1]+"\n康復人數為: "+a[country][2]
             return str_country
+        
     return "你查詢的國家並不存在!請重新嘗試~"
-
     
+
 
 
 def update():
@@ -36,7 +37,10 @@ def update():
     file.write(js)
     file.close()
 
-        
+    return "資料更新完成!"
+
+
+
     
 
 
