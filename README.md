@@ -6,7 +6,7 @@ Line ID: @555eknkm
 
 QRcode:
 
-![555eknkm](https://user-images.githubusercontent.com/43400890/150499523-48abbabb-6149-4bfc-97fc-6a72cfc3f1c4.png)
+<img src="https://user-images.githubusercontent.com/43400890/150499523-48abbabb-6149-4bfc-97fc-6a72cfc3f1c4.png" width="200">
 
 ## 技術
 - LineBot: 聊天機器人
