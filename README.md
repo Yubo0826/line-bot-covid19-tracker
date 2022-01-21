@@ -8,8 +8,10 @@ QRcode:
 
 ![555eknkm](https://user-images.githubusercontent.com/43400890/150499523-48abbabb-6149-4bfc-97fc-6a72cfc3f1c4.png)
 
-## 簡介
-Line Bot聊天機器人 + Python爬蟲抓數據 + 部屬到heroku雲端伺服器
+## 技術
+- LineBot: 聊天機器人
+- Python: 爬蟲抓數據
+- Heroku: 雲端伺服器
 
 爬蟲網址: https://www.thenewslens.com/interactive/129422
 
