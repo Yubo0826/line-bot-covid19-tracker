@@ -12,7 +12,6 @@ def fetch(country):
             return str_country
         
     return "你查詢的國家並不存在!請重新嘗試~"
-    
 
 
 
